@@ -10,7 +10,7 @@ const main = async () => {
   const wethTokenAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
   await approveErc20(wethTokenAddress, lendingPool.address, AMOUNT, signer);
   console.log("Deposting.....");
-  await lendingPool.deposit(wethTokenAddress, AMOUNT, signer, 0);
+  await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0);
   console.log("Deposited!");
 };
 
