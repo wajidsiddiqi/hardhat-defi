@@ -6,7 +6,7 @@ const main = async () => {
   const { deployer } = await getNamedAccounts();
   const signer = ethers.provider.getSigner(deployer);
   const lendingPool = await getLendingPool(signer);
-  console.log(`Lending Pool address ${lendingPool}`);
+  console.log(`Lending Pool address ${lendingPool.address}`);
   //   0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5
 };
 
